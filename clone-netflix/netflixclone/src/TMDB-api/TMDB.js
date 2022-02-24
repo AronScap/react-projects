@@ -13,27 +13,32 @@ export default{
             {
                 'simpleName': 'originals',
                 'title' : 'Originais da Netflix',
-                'items' : []
+                'items' : await movieFecth(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_key}`)
             },
             {
                 'simpleName': 'trend',
-                'title' : 'Em alta',
-                'items' : []
+                'title' : 'Recomendados para Você',
+                'items' : await movieFecth(`/trending/all/week?language=pt-BR&api_key=${API_key}`)
+            },
+            {
+                'simpleName': 'toprated',
+                'title' : 'Em Alta',
+                'items' : await movieFecth(`/movie/top_rated?language=pt-BR&api_key=${API_key}`)
             },
             {
                 'simpleName': 'action',
                 'title' : 'Ação',
-                'items' : []
+                'items' : await movieFecth(`/discover/movie?with_genres=28language=pt-BR&api_key=${API_key}`)
             },
             {
                 'simpleName': 'comedia',
                 'title' : 'Comédia',
-                'items' : []
+                'items' : await movieFecth(`/discover/movie?with_genres=35language=pt-BR&api_key=${API_key}`)
             },
             {
                 'simpleName': 'documentaries',
                 'title' : 'Documentários',
-                'items' : []
+                'items' : await movieFecth(`/discover/movie?with_genres=99language=pt-BR&api_key=${API_key}`)
             },
         ]
     }
