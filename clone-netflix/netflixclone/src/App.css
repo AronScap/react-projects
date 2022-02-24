@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    font-family: 'Raleway', sans-serif;box-sizing: border-box;
+    -webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;            /* Possível implementação no futuro */
+}
+body{background-color: #111;color:white;margin:0;padding: 0;}
+footer{color:white; text-align: center;margin: 50px 0px;}
+h2{color:white}
+.movies--list{margin-top: -100px;}
+.loading{
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading img{height: 200px;}
+@media (max-width:750px){
+    .movies--list{margin-top: -70px;}
+}
