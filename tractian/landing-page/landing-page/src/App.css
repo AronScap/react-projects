@@ -44,7 +44,28 @@ body{
     background-color: white;
     color: var(--primary-color);
 }
+.button--secondary{
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 50px;
+    text-decoration: none;
+    padding: 14px 37px;
+    margin-top: 30px;
+    display: table;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all ease 0.4s;    font-weight: bold;
+    font-size: 16px;
+}
+.button--secondary:hover{
+    background-color: var(--primary-color);;
+    color: white
+}
 
 @media (max-width:750px){
     .container{width: 100%;max-width: 100%;}
 }
+.text-center{
+    text-align: center;
+}
+.pb-0{padding-bottom: 0px;}

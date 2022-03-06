@@ -1,0 +1,60 @@
+.contato-infos{
+    display: flex;
+    padding: 40px 0px;
+    justify-content: space-between;
+}
+.contato-title{
+    color:white;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.contato-description{
+    color:white;
+    margin-bottom: 30px;
+}
+.contato-formulario{
+    width: 40%;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+label{
+    color:white;
+    border: none;
+    box-shadow: none;
+}
+a{cursor:pointer;}
+.contato-list{
+    color:white;
+    list-style: none;
+}
+.contato-list li{
+    margin: 6px 0px;
+}
+input{margin-bottom: 10px;}
+
+@media (max-width:750px){
+    .contato-infos{
+        display: block;
+    }
+    .contato-formulario{
+        margin-top: 55px;
+        width: 100%;
+    }
+}

@@ -3,6 +3,7 @@ import './App.css';
 import Banner from './components/banner';
 import Header from './components/header';
 import Footer from './components/footer';
+import Home from './components/home';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <div>
       <Header active={activeHeader} />
       <Banner />
+      <Home />
       <Footer />
     </div>
   );
