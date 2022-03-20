@@ -9,12 +9,58 @@
 .App{
   text-align: center;
   color: var(--primary-color);
-  width: 400px;
-  display: block;
+
+  flex-wrap: wrap;
+  padding: 2rem 0px;
 }
 .pokemon--list{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+}
+.pokemon--list .pokemon--info {
+  padding: 2rem 1rem;
+  display: table;
+  width: 200px;
+  height: 75px;
+  margin: 1rem;
+  background-color: rgb(252, 252, 252);
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px lightgray;
+}
+.pokemon--list .pokemon--info h1{
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.pokemon--list .pokemon--info a{
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 100%;
+  padding: 3px 0px 7px 0px ;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  border: solid 3px var(--primary-color);
+  transition: ease-in 0.25s;
+}
+.pokemon--list .pokemon--info a:hover{
+  color: var(--primary-color);
+  background-color: white;
+  border-color: var(--primary-color);
+}
+
+@media (max-width:950px){
+  .pokemon--list{width: 700px; }
+}
+@media (max-width:750px){
+  .pokemon--list{width: 100%;}
+  .pokemon--list .pokemon--info{width: 100%;}
 }

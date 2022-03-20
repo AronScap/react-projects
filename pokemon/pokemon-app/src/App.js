@@ -5,20 +5,28 @@ import Pagination from './components/Pagination';
 
 function App() {
   const [pokemonList, setPokemonList] = useState([]);
-  useEffect(()=>{
+  const [actualPage, setActualPage] = useState(12);
+  const [totalPokemon, setTotalPokemon] = useState(1);
+  const itemsPerPage = 12;
+  const numberMaxOfPages = 4;
+
+  useEffect(()=>{     
     const loadAll = async () => {
-      let list = await PokeApi.getPokemonsList();
-      // console.log(list)
+      let list = await PokeApi.getPokemonsList(itemsPerPage,actualPage);
+      setTotalPokemon(list.count);
       setPokemonList(list);
     }
     loadAll();
-  }, []);
+  }, [actualPage]);
+
+  
 
   return (
     <div className="App">
       {/* header */}
-      Hello Pokemons
-      {pokemonList.results.length > 0 && 
+      Hello Pokemon
+      <div>{totalPokemon} Pokemon</div>
+      {pokemonList.results && pokemonList.results.length > 0  && 
         <section className='pokemon--list'>
           {pokemonList.results.map( (item,key) => (
             <div className='pokemon--info' key={key}>
@@ -28,7 +36,10 @@ function App() {
           ))}
         </section>
       }
-      <Pagination />
+      
+      {totalPokemon > itemsPerPage &&
+        <Pagination itemsPerPage={itemsPerPage} totalItems={totalPokemon} numberMaxOfPages={numberMaxOfPages} actualPage={actualPage} />
+      }
       {/* footer */}
     </div>
   );

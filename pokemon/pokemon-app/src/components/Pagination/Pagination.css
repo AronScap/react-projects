@@ -1,3 +1,29 @@
-.pagination--block{
-    color:red;
+.pagination--list{
+    display: flex;
+    justify-content: center;
+}
+.pagination--link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination--number{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding: 5px 7px;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0px 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pagination--number.actual{ 
+    color: var(--primary-color);
+    background-color: lightgray!important;
+    cursor: default;
+}
+.pagination--number:hover{
+    color: var(--primary-color);
+    background-color: lightgray;
 }
