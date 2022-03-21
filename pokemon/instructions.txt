@@ -4,12 +4,12 @@ Projeto em React
 
 Desenvolva uma Single Page Application para:
 
-Consumir e listar os dados da API https://pokeapi.co;
-Distinguir os tipos de Pokémon por cores;
-Adicionar paginação e controle de registros por página;
-Criar evento de clique nos itens com exibição de um modal com o detalhamento do Pokémon selecionado;
-Possibilitar que o usuário selecione os itens favoritos, em uma segunda lista persistida em cache.
+- Consumir e listar os dados da API https://pokeapi.co;
+- Distinguir os tipos de Pokémon por cores;
+- Adicionar paginação e controle de registros por página;
+- Criar evento de clique nos itens com exibição de um modal com o detalhamento do Pokémon selecionado;
+- Possibilitar que o usuário selecione os itens favoritos, em uma segunda lista persistida em cache.
 Regras/Sugestões:
 
-Recomendamos não utilizar nenhum framework para o layout, por isso, seja criativo e utilize os seus conhecimentos em HTML5, CSS3, JavaScript e React;
+- Recomendamos não utilizar nenhum framework para o layout, por isso, seja criativo e utilize os seus conhecimentos em HTML5, CSS3, JavaScript e React;
 Recomendamos o uso da biblioteca Redux para o controle e gerenciamento de estados e também algum pacote que te auxilie na persistência.

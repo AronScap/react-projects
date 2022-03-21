@@ -1,0 +1,7 @@
+.header--menu{
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    top: 0;
+}

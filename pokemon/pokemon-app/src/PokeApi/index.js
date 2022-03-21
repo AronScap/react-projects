@@ -17,5 +17,12 @@ export default{
             info = await pokemonFetch(`pokemon/${pokemonID}`);
         }
         return info;
-    }
+    },
+    getPokemonSpeciesInfo: async (pokemonID) => {
+        let info = {};
+        if(pokemonID){
+            info = await pokemonFetch(`pokemon-species/${pokemonID}`);
+        }
+        return info;
+    },
 }

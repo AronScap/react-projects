@@ -1,7 +1,7 @@
 import React from "react";
 import './Pagination.css';
 
-export default function Pagination({itemsPerPage, totalItems, numberMaxOfPages, actualPage}) {
+export default function Pagination({itemsPerPage, totalItems, numberMaxOfPages, actualPage, setActualPage}) {
     const pageNumbers = [];
     const numberOfPages = Math.ceil(totalItems / itemsPerPage);
     let offsetI = numberMaxOfPages + actualPage;
@@ -27,11 +27,13 @@ export default function Pagination({itemsPerPage, totalItems, numberMaxOfPages, 
     return (
         <div className='pagination--list'>
             <div className="pagination--link">
-                {actualPage > 1 && <div className="pagination--previous">{'<'}</div>}
+                {actualPage > 1 && <div onClick={() => setActualPage(actualPage-1)} className="pagination--number">{'<'}</div>}
                 {pageNumbers.map(number => (
-                    <div className={actualPage===number?"pagination--number actual":"pagination--number"}>{number}</div>
+                    <div onClick={() => setActualPage(number)} className={actualPage===number?"pagination--number actual":"pagination--number"}>
+                        {number}
+                    </div>
                 ))}
-                {actualPage < numberOfPages && <div className="pagination--after">{'>'}</div>}
+                {actualPage < numberOfPages && <div onClick={() => setActualPage(actualPage+1)} className="pagination--number">{'>'}</div>}
             </div> 
         </div>
     );
